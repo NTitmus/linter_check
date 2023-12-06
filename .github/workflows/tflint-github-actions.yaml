@@ -36,8 +36,9 @@ jobs:
         # https://github.com/terraform-linters/tflint/blob/master/docs/user-guide/plugins.md#avoiding-rate-limiting
         GITHUB_TOKEN: ${{ github.token }}
 
-    - uses: terraform-linters/setup-tflint@v3
+    - name: Run TFLint Now
       run: tflint -f compact
+    #- uses: terraform-linters/setup-tflint@v3
       #with:
       #  tflint_wrapper: true
     
