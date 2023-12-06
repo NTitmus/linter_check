@@ -37,13 +37,14 @@ jobs:
         GITHUB_TOKEN: ${{ github.token }}
 
     - uses: terraform-linters/setup-tflint@v3
-      with:
-        tflint_wrapper: true
-    
-    - id: tflint
       run: tflint -f compact
+      #with:
+      #  tflint_wrapper: true
+    
+    #- id: tflint
+    #  run: tflint -f compact
 
-    - run: echo hi!
-    - run: echo ${{ steps.tflint.outputs.stdout }}
-    - run: echo ${{ steps.tflint.outputs.stderr }}
-    - run: echo ${{ steps.tflint.outputs.exitcode }}
+    #- run: echo hi!
+    #- run: echo ${{ steps.tflint.outputs.stdout }}
+    #- run: echo ${{ steps.tflint.outputs.stderr }}
+    #- run: echo ${{ steps.tflint.outputs.exitcode }}
